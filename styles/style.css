@@ -1,0 +1,467 @@
+.introducao {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 100px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 50px;
+}
+
+.introducao img {
+  width: 100%;
+  display: block;
+}
+
+.introducao h2 {
+  font-size: 4.5rem;
+  position: relative;
+}
+.introducao div h2::before {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 140px;
+  background: url("../img/detalhe.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+  top: -30px;
+  left: -30px;
+}
+
+.introducao p {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  color: #525252;
+}
+
+@media (max-width: 1000px) {
+  .introducao h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .introducao {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .introducao h2 {
+    font-size: 2rem;
+  }
+
+  .introducao div h2::before {
+    background-size: 50px;
+    left: -16px;
+    top: -6px;
+  }
+}
+
+@media (max-width: 580px) {
+  .introducao {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 30px;
+  }
+
+  .introducao img {
+    max-width: 300px;
+    margin: auto;
+  }
+
+  .introducao h2,
+  .introducao p {
+    text-align: center;
+  }
+
+  .introducao div h2::before {
+    display: none;
+  }
+}
+
+.grid {
+  max-width: 1200px;
+  padding: 120px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+}
+
+.grid .xp {
+  grid-row: 1 / span 2;
+}
+
+.grid .xp span {
+  display: block;
+  word-break: break-all;
+  font-size: 8rem;
+  font-weight: bold;
+  max-width: 5ch;
+  color: #e0e0e0;
+}
+
+.grid .description p {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  max-width: 50ch;
+  color: #525252;
+}
+
+.grid .description p strong {
+  color: #141414;
+}
+
+.grid .cards {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.grid .card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #f5f5f5;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  padding: 20px;
+  gap: 10px 20px;
+}
+
+.grid .card .ano {
+  position: absolute;
+  color: #525252;
+  font-size: 0.875rem;
+  width: 80px;
+  text-align: right;
+  top: 21px;
+  left: -130px;
+}
+
+.grid .card::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(180deg, #b6f829 0%, #67dd0a 100%);
+  position: absolute;
+  top: 20px;
+  left: -4px;
+}
+
+.grid .card h3 {
+  display: block;
+  height: 1.125rem;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+}
+
+.grid .card p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #525252;
+}
+
+.grid .card .linguagem {
+  padding: 10px;
+  display: inline-block;
+  background-color: #fff;
+  margin: 0 10px 10px 0;
+}
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .grid .xp span {
+    color: #141414;
+    font-size: 3rem;
+    max-width: initial;
+    text-align: center;
+  }
+
+  .grid .description {
+    width: 100%;
+  }
+
+  .grid .description p {
+    margin: auto;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .grid .card .ano {
+    position: initial;
+    order: 1;
+    text-align: left;
+  }
+}
+
+@media (max-width: 550px) {
+  .grid .card {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bgblack {
+  background: #141414;
+}
+
+.formacao {
+  max-width: 1200px;
+  padding: 120px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.tittle-formacao span {
+  display: block;
+  word-break: break-all;
+  font-size: 8rem;
+  max-width: 5ch;
+  font-weight: bold;
+  color: #000000;
+}
+
+.formacao .description-formacao {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  max-width: 40ch;
+  color: #a3a3a3;
+  margin-bottom: 60px;
+}
+
+.formacao .description-formacao strong {
+  color: #fff;
+}
+
+.formacao .diplomas-formacao {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.formacao .diplomas-formacao div {
+  flex: 1;
+  background: #090909;
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formacao .diplomas-formacao span {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.12rem;
+  color: #a3a3a3;
+}
+
+.formacao .diplomas-formacao span:nth-child(1) {
+  font-size: 0.8rem;
+}
+
+.formacao .diplomas-formacao span:nth-child(2) {
+  margin-bottom: 50px;
+  color: #ffffff;
+  font-weight: bold;
+  position: relative;
+  flex: 1;
+}
+
+.formacao .diplomas-formacao span:nth-child(2)::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(180deg, #b6f829 0%, #67dd0a 100%);
+  position: absolute;
+  top: 0px;
+  left: -20px;
+}
+
+.formacao .cursos-intensivos {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.formacao .cursos-intensivos div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formacao .cursos-intensivos h5 {
+  font-size: 0.87rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+  color: #8f8f8f;
+  position: relative;
+}
+
+.formacao .cursos-intensivos h5::before {
+  content: "";
+  display: block;
+  background: url("../img/cursos.svg");
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: -4px;
+  left: -36px;
+}
+
+.formacao .cursos-intensivos div p {
+  color: #ffffff;
+  font-size: 1.12rem;
+}
+
+.formacao .cursos-intensivos div p:nth-child(even) {
+  color: #8f8f8f;
+}
+
+.formacao .idiomas h5 {
+  font-weight: bold;
+  font-size: 0.87rem;
+  line-height: 1.5rem;
+  color: #8f8f8f;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.formacao .idiomas h5::before {
+  content: "";
+  display: block;
+  background: url("../img/idiomas.svg");
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: -4px;
+  left: -36px;
+}
+
+.formacao .idiomas p {
+  font-size: 1.2rem;
+  line-height: 1.25rem;
+  color: #ffffff;
+}
+
+.formacao .idiomas p span {
+  color: #8f8f8f;
+}
+
+@media (max-width: 800px) {
+  .formacao {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+    gap: 40px;
+  }
+
+  .formacao .tittle-formacao span {
+    font-size: 3rem;
+    color: #fff;
+    max-width: initial;
+    text-align: center;
+  }
+
+  .formacao .description-formacao {
+    font-size: 1.25rem;
+    margin: 60px auto;
+    text-align: center;
+  }
+
+  .formacao .cursos-intensivos h5::before,
+  .formacao .idiomas h5::before {
+    position: initial;
+    margin-bottom: 10px;
+  }
+
+  .formacao .idiomas {
+    margin-bottom: 30px;
+  }
+}
+
+footer {
+  background: #000;
+}
+
+footer .footer-info {
+  max-width: 1200px;
+  padding: 120px 20px 80px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 100px;
+  position: relative;
+}
+
+footer .footer-info::before {
+  content: "";
+  background: url("../img/detalhe.svg") no-repeat center;
+  width: 130px;
+  height: 100px;
+  position: absolute;
+  top: -50px;
+  left: 20px;
+}
+
+footer .footer-text {
+  max-width: 460px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #cccccc;
+}
+
+footer .contact {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+footer .contact a {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 2rem;
+  color: #ffffff;
+}
+
+.direitos {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-copy {
+  grid-column: 1 / -1;
+  font-size: 1.12rem;
+  line-height: 2rem;
+  color: #8f8f8f;
+}
+
+@media (max-width: 800px) {
+  footer .footer-info {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  footer .footer-info a {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  footer .footer-info a {
+    font-size: 1rem;
+  }
+}
